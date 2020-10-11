@@ -1,0 +1,27 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: iceberg-base
+#  boot:   # Spring Boot Admin Server
+#    admin:
+#      client:
+#        url: http://localhost:10002
+
+# Spring Boot Admin Client 配置
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+
+eureka:
+  client:
+    security:
+      user: iceberg
+      password: iceberg123
+    service-url:
+      defaultZone: http://${eureka.client.security.user}:${eureka.client.security.password}@127.0.0.1:10000/eureka/
+#  instance:
+#    lease-renewal-interval-in-seconds: 5 # 5秒钟发送一次心跳
+#    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期

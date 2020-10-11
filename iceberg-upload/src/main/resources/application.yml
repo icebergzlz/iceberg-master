@@ -1,0 +1,21 @@
+server:
+  port: 10003
+spring:
+  application:
+    name: iceberg-upload
+  servlet:
+    multipart:
+      max-file-size: 10MB #限制文件上传大小为10M
+eureka:
+  client:
+    security:
+      user: iceberg
+      password: iceberg123
+    service-url:
+      defaultZone: http://${eureka.client.security.user}:${eureka.client.security.password}@127.0.0.1:10000/eureka/
+
+minio:
+  endpoint: http://192.168.11.130:9000 #MinIO服务所在地址
+  bucketName: iceberg-image #存储桶名称
+  accessKey: iceberg #访问的key
+  secretKey: iceberg128 #访问的秘钥

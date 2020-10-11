@@ -1,0 +1,18 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: iceberg-eureka
+  security:    # Eureka Server & Spring Security 服务注册与发现安全认证  配置
+    user:
+      name: iceberg
+      password: iceberg123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@127.0.0.1:${server.port}/eureka/
+    register-with-eureka: false # 把自己注册到eureka服务列表,关闭
+    fetch-registry: false  # 拉取eureka服务信息,关闭
+#  server:
+#    enable-self-preservation: false  # 自我保护,关闭
+#    eviction-interval-timer-in-ms: 5000 # 每隔5秒钟，进行一次服务列表的清理  生产环境不建议

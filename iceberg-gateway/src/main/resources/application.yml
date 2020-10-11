@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: iceberg-gateway
+
+eureka:
+  client:
+    security:
+      user: iceberg
+      password: iceberg123
+    service-url:
+      defaultZone: http://${eureka.client.security.user}:${eureka.client.security.password}@127.0.0.1:10000/eureka/
+
+zuul:
+  prefix: /api
+  ignored-services:
+    - iceberg-upload

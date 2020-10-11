@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="iceberg-base" />
+        <module name="iceberg-common" />
+        <module name="iceberg-eureka" />
+        <module name="iceberg-gateway" />
+        <module name="iceberg-sbadmin" />
+        <module name="iceberg-upload" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="iceberg-common" target="1.8" />
+      <module name="icebergcommon" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="iceberg-base" options="-parameters" />
+      <module name="iceberg-common" options="-parameters" />
+      <module name="iceberg-eureka" options="-parameters" />
+      <module name="iceberg-gateway" options="-parameters" />
+      <module name="iceberg-master" options="-parameters" />
+      <module name="iceberg-sbadmin" options="-parameters" />
+      <module name="iceberg-upload" options="-parameters" />
+      <module name="icebergcommon" options="-parameters" />
+    </option>
+  </component>
+</project>

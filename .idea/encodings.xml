@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-sbadmin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iceberg-upload" charset="UTF-8" />
+  </component>
+</project>
